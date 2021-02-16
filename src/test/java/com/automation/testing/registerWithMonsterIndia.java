@@ -13,13 +13,13 @@ public class registerWithMonsterIndia {
 		System.setProperty("webdriver.chrome.driver","./driver/chromedriver.exe");
 
         WebDriver driver = new ChromeDriver();
-        driver.get("https://qa1.monsterindia.com/");
         driver.manage().window().maximize();
+        driver.get("https://www.monsterindia.com/");
         driver.findElement(By.xpath("//a[@class=\"semi-bold reg-btn block uprcse\"]")).click();
         driver.findElement(By.xpath("//input[@placeholder=\"Enter your full name\"]")).sendKeys("ABC");
-        driver.findElement(By.xpath("//input[@class=\"input email-autocomplete-input\"]")).sendKeys("automationaaaac@gmail.com");
+        driver.findElement(By.xpath("//input[@class=\"input email-autocomplete-input\"]")).sendKeys("automationaaaaq@gmail.com");
         driver.findElement(By.xpath("//input[@class=\"input pass\"]")).sendKeys("abc@123645");
-        driver.findElement(By.xpath("//input[@name=\"Mobile Number\"]")).sendKeys("3102820294");
+        driver.findElement(By.xpath("//input[@name=\"Mobile Number\"]")).sendKeys("3102820309");
         driver.findElement(By.xpath("//*[text()=\"Current Location \"]//following::div[3]")).click();
         //Thread.sleep(1000);
         driver.findElement(By.xpath("//input[@placeholder=\"Search Location\"]")).sendKeys("delhi");
@@ -56,6 +56,28 @@ public class registerWithMonsterIndia {
         driver.findElement(By.xpath("//input[@placeholder=\"Most Recent Designation\"]//parent::div[@class=\"multiselect__tags modal-ref-class\"]")).click();
         driver.findElement(By.xpath("//input[@placeholder=\"Most Recent Designation\"]")).sendKeys("SDE");
         driver.findElement(By.xpath("//input[@placeholder=\"Most Recent Designation\"]")).sendKeys(Keys.ENTER);
+        driver.findElement(By.xpath("//input[@placeholder=\"Most Recent Company\"]//parent::div[@class=\"multiselect__tags modal-ref-class\"]")).click();
+        driver.findElement(By.xpath("//input[@placeholder=\"Most Recent Company\"]")).sendKeys("MonsterIndia");
+        driver.findElement(By.xpath("//input[@placeholder=\"Most Recent Company\"]")).sendKeys(Keys.ENTER);
+        driver.findElement(By.xpath("//input[@placeholder=\"Year\"]//parent::div")).click();
+        driver.findElement(By.xpath("//input[@placeholder=\"Year\"]")).sendKeys("2020");
+        driver.findElement(By.xpath("//input[@placeholder=\"Year\"]")).sendKeys(Keys.ENTER);
+        driver.findElement(By.xpath("//div[@class=\"col-sm-5\"][1]//descendant::div[18]")).click();
+        driver.findElement(By.xpath("//div[@class=\"col-sm-5\"][1]//descendant::input[3]")).sendKeys("Decem");
+        driver.findElement(By.xpath("//div[@class=\"col-sm-5\"][1]//descendant::input[3]")).sendKeys(Keys.ENTER);
+        driver.findElement(By.xpath("//input[@placeholder=\"Lacs\"]//parent::div")).click();
+        driver.findElement(By.xpath("//input[@placeholder=\"Lacs\"]")).sendKeys("1");
+        driver.findElement(By.xpath("//input[@placeholder=\"Lacs\"]")).sendKeys(Keys.ENTER);
+        driver.findElement(By.xpath("//input[@placeholder=\"Thousand\"]//parent::div")).click();
+        driver.findElement(By.xpath("//input[@placeholder=\"Thousand\"]")).sendKeys("50");
+        driver.findElement(By.xpath("//input[@placeholder=\"Thousand\"]")).sendKeys(Keys.ENTER);
+        driver.findElement(By.xpath("//span[text()=\"Select\"]//parent::div[@class=\"multiselect__tags modal-ref-class single-selected\"]")).click();
+        driver.findElement(By.xpath("//span[text()=\"Immediately available\"]")).click();
+//        driver.findElement(By.xpath("//span[text()=\"Select\"]//parent::div[@class=\"multiselect__tags modal-ref-class single-selected\"]")).sendKeys(Keys.ARROW_DOWN);
+//        driver.findElement(By.xpath("//span[text()=\"Select\"]//parent::div[@class=\"multiselect__tags modal-ref-class single-selected\"]")).sendKeys(Keys.ENTER);
+        driver.findElement(By.xpath("//button[@id=\"empSubmit\"]")).click();
+        
+        
 	}
 
 }
