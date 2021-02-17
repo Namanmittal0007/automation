@@ -1,31 +1,23 @@
- package com.automation.testing;
+package com.automation.testing;
 
-import java.util.concurrent.TimeUnit;
-
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class registerWithMonsterIndia {
 	public static void main(String[] args) throws Exception {
-		System.setProperty("webdriver.chrome.driver","./driver/chromedriver.exe");
-
-        WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://www.monsterindia.com/");
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\NAMAN\\Desktop\\New folder\\opensource\\automation\\driver\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.monsterindia.com/");
         driver.findElement(By.xpath("//a[@class=\"semi-bold reg-btn block uprcse\"]")).click();
         driver.findElement(By.xpath("//input[@placeholder=\"Enter your full name\"]")).sendKeys("ABC");
-        driver.findElement(By.xpath("//input[@class=\"input email-autocomplete-input\"]")).sendKeys("automationaaaaq@gmail.com");
+        driver.findElement(By.xpath("//input[@class=\"input email-autocomplete-input\"]")).sendKeys("automationaaaba@gmail.com");
         driver.findElement(By.xpath("//input[@class=\"input pass\"]")).sendKeys("abc@123645");
-        driver.findElement(By.xpath("//input[@name=\"Mobile Number\"]")).sendKeys("3102820309");
+        driver.findElement(By.xpath("//input[@name=\"Mobile Number\"]")).sendKeys("3102820319");
         driver.findElement(By.xpath("//*[text()=\"Current Location \"]//following::div[3]")).click();
-        //Thread.sleep(1000);
         driver.findElement(By.xpath("//input[@placeholder=\"Search Location\"]")).sendKeys("delhi");
         Thread.sleep(1000);
         driver.findElement(By.xpath("//input[@placeholder=\"Search Location\"]")).sendKeys(Keys.ENTER);
-        //Thread.sleep(1000);
         driver.findElement(By.xpath("//div[@class=\"multiselect__tags modal-ref-class\"]")).click();
         driver.findElement(By.xpath("//input[@placeholder=\"Experience in years\"]")).sendKeys("2");
         driver.findElement(By.xpath("//input[@placeholder=\"Experience in years\"]")).sendKeys(Keys.ENTER);
@@ -73,11 +65,49 @@ public class registerWithMonsterIndia {
         driver.findElement(By.xpath("//input[@placeholder=\"Thousand\"]")).sendKeys(Keys.ENTER);
         driver.findElement(By.xpath("//span[text()=\"Select\"]//parent::div[@class=\"multiselect__tags modal-ref-class single-selected\"]")).click();
         driver.findElement(By.xpath("//span[text()=\"Immediately available\"]")).click();
-//        driver.findElement(By.xpath("//span[text()=\"Select\"]//parent::div[@class=\"multiselect__tags modal-ref-class single-selected\"]")).sendKeys(Keys.ARROW_DOWN);
-//        driver.findElement(By.xpath("//span[text()=\"Select\"]//parent::div[@class=\"multiselect__tags modal-ref-class single-selected\"]")).sendKeys(Keys.ENTER);
-        driver.findElement(By.xpath("//button[@id=\"empSubmit\"]")).click();
-        
-        
+        driver.findElement(By.xpath("//button[@id=\"empSubmit\"]")).click(); 
+        Thread.sleep(5000);
+        driver.findElement(By.xpath("//div[@class=\"multiselect__tags modal-ref-class boxWrapper\"]")).click();
+        driver.findElement(By.xpath("//div[@class=\"multiselect__tags modal-ref-class boxWrapper\"]//child::input")).sendKeys("B.tech");
+        driver.findElement(By.xpath("//div[@class=\"multiselect__tags modal-ref-class boxWrapper\"]//child::input")).sendKeys(Keys.ENTER);
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//label[text()=\"Specialization/Major \"]//following::div[5]")).click();
+        driver.findElement(By.xpath("//label[text()=\"Specialization/Major \"]//following::input[1]")).sendKeys("computer");
+        driver.findElement(By.xpath("//label[text()=\"Specialization/Major \"]//following::input[1]")).sendKeys(Keys.ENTER);
+        Thread.sleep(500);
+        driver.findElement(By.xpath("//label[text()=\"University/Institute \"]//following::div[4]")).click();
+        Thread.sleep(500);
+        driver.findElement(By.xpath("//label[text()=\"University/Institute \"]//following::input[1]")).sendKeys("Amity University");
+        Thread.sleep(500);
+        driver.findElement(By.xpath("//label[text()=\"University/Institute \"]//following::input[1]")).sendKeys(Keys.ENTER);
+        Thread.sleep(500);
+        driver.findElement(By.xpath("//label[text()=\"Year of Graduation \"]//following::div[5]")).click();
+        driver.findElement(By.xpath("//label[text()=\"Year of Graduation \"]//following::input[1]")).sendKeys("2021");
+        driver.findElement(By.xpath("//label[text()=\"Year of Graduation \"]//following::input[1]")).sendKeys(Keys.ENTER);
+        driver.findElement(By.xpath("//button[@id=\"edSubmit\"]")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//input[@placeholder=\"Please select one or more preferred location(s)\"]//parent::div[@class=\"multiselect__tags modal-ref-class boxWrapper\"]")).click();
+        driver.findElement(By.xpath("//input[@placeholder=\"Please select one or more preferred location(s)\"]")).sendKeys("Delhi");
+        Thread.sleep(500);
+        driver.findElement(By.xpath("//input[@placeholder=\"Please select one or more preferred location(s)\"]")).sendKeys(Keys.ENTER);
+        driver.findElement(By.xpath("//label[text()=\"Select Country of Residence\"]//following::div[7]")).click();
+        driver.findElement(By.xpath("//label[text()=\"Select Country of Residence\"]//following::input[1]")).sendKeys("India");
+        driver.findElement(By.xpath("//label[text()=\"Select Country of Residence\"]//following::input[1]")).sendKeys(Keys.ARROW_DOWN);
+        driver.findElement(By.xpath("//label[text()=\"Select Country of Residence\"]//following::input[1]")).sendKeys(Keys.ENTER);
+        driver.findElement(By.xpath("//label[text()=\"Preferred Role(s)\"]//following::div[5]")).click();
+        driver.findElement(By.xpath("//label[text()=\"Preferred Role(s)\"]//following::input[1]")).sendKeys("Software Developer");
+        driver.findElement(By.xpath("//label[text()=\"Preferred Role(s)\"]//following::input[1]")).sendKeys(Keys.ENTER);
+        driver.findElement(By.xpath("//span[text()=\"Male\"]")).click();
+        driver.findElement(By.xpath("//span[text()=\"Permanent\"]")).click();
+        driver.findElement(By.xpath("//span[text()=\"Male\"]")).click();
+        driver.findElement(By.xpath("//button[@type=\"submit\"]")).click();
+//        driver.findElement(By.xpath("//label[text()=\"Year of Graduation \"]//following::div[5]")).click();
+//        driver.findElement(By.xpath("//label[text()=\"Year of Graduation \"]//following::input[1]")).sendKeys("2021");
+//        driver.findElement(By.xpath("//label[text()=\"Year of Graduation \"]//following::input[1]")).sendKeys(Keys.ENTER);
+//        driver.findElement(By.xpath("//label[text()=\"Year of Graduation \"]//following::div[5]")).click();
+//        driver.findElement(By.xpath("//label[text()=\"Year of Graduation \"]//following::input[1]")).sendKeys("2021");
+//        driver.findElement(By.xpath("//label[text()=\"Year of Graduation \"]//following::input[1]")).sendKeys(Keys.ENTER);
+//        
+      
 	}
-
 }
