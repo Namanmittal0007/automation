@@ -8,12 +8,12 @@ public class registerWithMonsterIndia {
 		System.setProperty("webdriver.chrome.driver","C:\\Users\\NAMAN\\Desktop\\New folder\\opensource\\automation\\driver\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get("https://www.monsterindia.com/");
+		driver.get("https://qa1.monsterindia.com/");
         driver.findElement(By.xpath("//a[@class=\"semi-bold reg-btn block uprcse\"]")).click();
-        driver.findElement(By.xpath("//input[@placeholder=\"Enter your full name\"]")).sendKeys("ABC");
-        driver.findElement(By.xpath("//input[@class=\"input email-autocomplete-input\"]")).sendKeys("automationaaaba@gmail.com");
+        driver.findElement(By.xpath("//input[@placeholder=\"Enter your full name\"]")).sendKeys("ABC"); 
+        driver.findElement(By.xpath("//input[@class=\"input email-autocomplete-input\"]")).sendKeys("automationaaabc@gmail.com");
         driver.findElement(By.xpath("//input[@class=\"input pass\"]")).sendKeys("abc@123645");
-        driver.findElement(By.xpath("//input[@name=\"Mobile Number\"]")).sendKeys("3102820319");
+        driver.findElement(By.xpath("//input[@name=\"Mobile Number\"]")).sendKeys("3102820321");
         driver.findElement(By.xpath("//*[text()=\"Current Location \"]//following::div[3]")).click();
         driver.findElement(By.xpath("//input[@placeholder=\"Search Location\"]")).sendKeys("delhi");
         Thread.sleep(1000);
@@ -101,13 +101,5 @@ public class registerWithMonsterIndia {
         driver.findElement(By.xpath("//span[text()=\"Permanent\"]")).click();
         driver.findElement(By.xpath("//span[text()=\"Male\"]")).click();
         driver.findElement(By.xpath("//button[@type=\"submit\"]")).click();
-//        driver.findElement(By.xpath("//label[text()=\"Year of Graduation \"]//following::div[5]")).click();
-//        driver.findElement(By.xpath("//label[text()=\"Year of Graduation \"]//following::input[1]")).sendKeys("2021");
-//        driver.findElement(By.xpath("//label[text()=\"Year of Graduation \"]//following::input[1]")).sendKeys(Keys.ENTER);
-//        driver.findElement(By.xpath("//label[text()=\"Year of Graduation \"]//following::div[5]")).click();
-//        driver.findElement(By.xpath("//label[text()=\"Year of Graduation \"]//following::input[1]")).sendKeys("2021");
-//        driver.findElement(By.xpath("//label[text()=\"Year of Graduation \"]//following::input[1]")).sendKeys(Keys.ENTER);
-//        
-      
 	}
 }
